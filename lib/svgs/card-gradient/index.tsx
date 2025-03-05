@@ -1,6 +1,10 @@
 import { SVGProps } from "react";
 
-export function T1Gradient({ ...props }: SVGProps<SVGSVGElement>) {
+interface Props extends SVGProps<SVGSVGElement> {
+  color?: string;
+}
+
+export function CardGradient({ color = "#711420", ...props }: Props) {
   return (
     <svg viewBox="0 0 300 450" {...props}>
       <defs>
@@ -13,7 +17,7 @@ export function T1Gradient({ ...props }: SVGProps<SVGSVGElement>) {
           data-name="Degradado sin nombre 2"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset={0} stopColor="#711420" />
+          <stop offset={0} stopColor={color} />
           <stop offset={1} />
         </linearGradient>
         <linearGradient

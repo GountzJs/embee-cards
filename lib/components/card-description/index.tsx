@@ -8,7 +8,7 @@ interface Props {
 export function CardDescription({ category, description }: Props) {
   const getColor = () => {
     if (category === CardCategory.T1) return "bg-t1-primary-dark";
-    return "bg-t1-primary-dark";
+    return "bg-lol-primary-dark";
   };
   const color = getColor();
 

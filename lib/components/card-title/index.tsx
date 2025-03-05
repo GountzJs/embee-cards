@@ -9,7 +9,7 @@ interface Props {
 export function CardTitle({ category, name }: Props) {
   const getColor = () => {
     if (category === CardCategory.T1) return "text-t1-primary";
-    return "text-t1-primary";
+    return "text-lol-primary";
   };
   const color = getColor();
   const sanitizedName = DOMPurify.sanitize(name);

@@ -7,7 +7,7 @@ import { CardStars } from "../../components/card-stars";
 import { CardTitle } from "../../components/card-title";
 import { CardCategory } from "../../models/enums/card-category.enum";
 import { CardBorder } from "../../svgs/card-border";
-import { T1Gradient } from "../../svgs/t1-gradient";
+import { CardGradient } from "../../svgs/card-gradient";
 
 interface Props {
   category: CardCategory;
@@ -24,10 +24,21 @@ export function CardEmbeejayz({
   identify,
   url,
 }: Props) {
+  const getGradientColor = () => {
+    if (category === CardCategory.T1) return "#711420";
+    return "#5c9398ff";
+  };
+
+  const getBorderColor = () => {
+    if (category === CardCategory.T1) return "#e3092b";
+    return "#6bc6d9ff";
+  };
+
   return (
     <div className="relative w-[300px] h-[450px] flex items-center justify-center select-none">
       <div className="w-full h-full grid place-items-center">
-        <T1Gradient
+        <CardGradient
+          color={getGradientColor()}
           width={300}
           height={450}
           className="row-start-1 col-start-1"
@@ -36,6 +47,7 @@ export function CardEmbeejayz({
           width={300}
           height={450}
           className="row-start-1 col-start-1"
+          color={getBorderColor()}
         />
         <CardContent>
           <div className="flex flex-col px-4 pt-4 h-full w-full">

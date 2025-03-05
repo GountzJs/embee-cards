@@ -9,7 +9,7 @@ interface Props {
 export function CardStars({ category }: Props) {
   const getColor = () => {
     if (category === CardCategory.T1) return "#e3092b";
-    return "#e3092b";
+    return "#6bc6d9ff";
   };
   const color = getColor();
 
