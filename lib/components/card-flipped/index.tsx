@@ -27,16 +27,10 @@ export function CardFlipped({ front, back, initialFace = "front" }: CardProps) {
           transformStyle: "preserve-3d",
         }}
       >
-        <div
-          className="absolute w-full h-full rotate-y-0"
-          style={{ backfaceVisibility: "hidden" }}
-        >
+        <div className="absolute w-full h-full rotate-y-0 backface-hidden">
           {front}
         </div>
-        <div
-          className="absolute w-full h-full rotate-y-180"
-          style={{ backfaceVisibility: "hidden" }}
-        >
+        <div className="absolute w-full h-full rotate-y-180 backface-hidden">
           {back}
         </div>
       </div>

@@ -15,7 +15,7 @@ export function CardDecorator({ category }: Props) {
       {category === CardCategory.T1 && <CupWorlds />}
       {category === CardCategory.Lolesports && <LolesportsLogo />}
       {category === CardCategory.Lolesports && (
-        <ElderDragon width={30} height={30} />
+        <ElderDragon width={35} height={35} />
       )}
     </div>
   );
