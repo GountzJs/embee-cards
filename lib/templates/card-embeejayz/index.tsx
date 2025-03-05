@@ -15,6 +15,8 @@ interface Props {
   description: string;
   identify: string;
   url: string;
+  isSpecial?: boolean;
+  rating?: number;
 }
 
 export function CardEmbeejayz({
@@ -23,6 +25,8 @@ export function CardEmbeejayz({
   description,
   identify,
   url,
+  rating = 1,
+  isSpecial = false,
 }: Props) {
   const getGradientColor = () => {
     if (category === CardCategory.T1) return "#711420";
@@ -53,7 +57,11 @@ export function CardEmbeejayz({
           <div className="flex flex-col px-4 pt-4 h-full w-full">
             <CardDecorator category={category} />
             <div className="flex flex-col items-center justify-center w-full">
-              <CardStars category={category} />
+              <CardStars
+                category={category}
+                isSpecial={isSpecial}
+                rating={rating}
+              />
               <CardTitle category={category} name={name} />
               <CardCover url={url} alt={`Card ${name}`} />
             </div>
