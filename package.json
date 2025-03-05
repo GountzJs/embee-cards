@@ -17,10 +17,8 @@
   },
   "packageManager": "pnpm@10.0.0",
   "scripts": {
-    "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.9",
