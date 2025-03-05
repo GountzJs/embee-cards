@@ -17,24 +17,25 @@ export function CardFlipped({ front, back, initialFace = "front" }: CardProps) {
     <div
       className="cursor-pointer"
       onClick={handleFlip}
-      style={{ perspective: "1000px" }}
+      style={{ perspective: "600px" }}
     >
       <div
-        className={`w-[200px] h-[300px] relative transition-transform duration-500`}
+        className={`w-[300px] h-[450px] relative transition-transform duration-500 ${
+          isFlipped ? "rotate-y-180" : "rotate-y-0"
+        }`}
         style={{
-          transform: isFlipped ? "rotateY(180deg)" : "rotateY(0deg)",
           transformStyle: "preserve-3d",
         }}
       >
         <div
-          className="absolute w-full h-full"
-          style={{ backfaceVisibility: "hidden", transform: "rotateY(0deg)" }}
+          className="absolute w-full h-full rotate-y-0"
+          style={{ backfaceVisibility: "hidden" }}
         >
           {front}
         </div>
         <div
-          className="absolute w-full h-full"
-          style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
+          className="absolute w-full h-full rotate-y-180"
+          style={{ backfaceVisibility: "hidden" }}
         >
           {back}
         </div>
