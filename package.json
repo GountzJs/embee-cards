@@ -3,6 +3,12 @@
   "version": "0.0.0",
   "type": "module",
   "types": "./dist/ui-cards.d.ts",
+  "license": "MIT",
+  "description": "Component library cards for Embeejayz's streaming projects.",
+  "author": {
+    "name": "GountzJs",
+    "email": "tomasjdev@gmail.com"
+  },
   "files": [
     "dist"
   ],
@@ -23,9 +29,9 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.0.9",
     "dompurify": "^3.2.4",
+    "tailwindcss": "^4.0.9",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "tailwindcss": "^4.0.9"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
@@ -45,5 +51,10 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
   }
 }

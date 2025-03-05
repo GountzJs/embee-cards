@@ -12,31 +12,32 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
-    dts({
-      rollupTypes: true,
-      insertTypesEntry: true,
-    }),
     viteStaticCopy({
       targets: [
         {
-          src: "lib/assets/*", // Añade el `*` para copiar todo el contenido
-          dest: "assets", // Mantenlo dentro de `dist/assets`
+          src: "lib/assets/*",
+          dest: "assets",
         },
       ],
+    }),
+    dts({
+      rollupTypes: true,
+      insertTypesEntry: true,
     }),
   ],
   build: {
     lib: {
       entry: resolve(__dirname, "lib/main.ts"),
-      name: "UICards",
+      name: "@embee-org/ui-cards",
       fileName: "ui-cards",
     },
     rollupOptions: {
-      external: ["react", "react-dom"],
+      external: ["react", "react-dom", "react/jsx-runtime"],
       output: {
         globals: {
           react: "React",
           "react-dom": "ReactDOM",
+          "react/jsx-runtime": "react/jsx-runtime",
         },
       },
     },
