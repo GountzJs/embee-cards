@@ -26,8 +26,8 @@ export function CardStars({ category, ranking, isSpecial }: Props) {
     <div className="flex items-center justify-center gap-1 w-full">
       {Array.from({ length: 5 }).map((_, i) => {
         if (ranking && i < ranking)
-          return <Star color={color} width={18} height={18} />;
-        return <StarIncomplete color={color} width={18} height={18} />;
+          return <Star key={i} color={color} width={18} height={18} />;
+        return <StarIncomplete key={i} color={color} width={18} height={18} />;
       })}
     </div>
   );
