@@ -16,7 +16,7 @@ export function CardFlipped({ front, back, initialFace = "front" }: CardProps) {
   return (
     <div
       onClick={handleFlip}
-      className="cursor-pointer perspective-1000 perspective-origin-center"
+      className="cursor-pointer perspective-1000 perspective-origin-[1000px]"
     >
       <div
         className={`w-[300px] h-[450px] relative transition-transform duration-500 transform-style-3d ${
