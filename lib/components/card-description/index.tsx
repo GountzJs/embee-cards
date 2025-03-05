@@ -7,14 +7,14 @@ interface Props {
 
 export function CardDescription({ category, description }: Props) {
   const getColor = () => {
-    if (category === CardCategory.T1) return "#711420";
-    return "#cdcccc";
+    if (category === CardCategory.T1) return "bg-t1-primary-dark";
+    return "bg-t1-primary-dark";
   };
   const color = getColor();
 
   return (
     <p
-      className={`bg-[${color}] leading-tight text-center font-medium font-montserrat text-[12px] text-[#fff] px-4 pt-4 pb-2 h-full rounded-md`}
+      className={`${color} leading-tight text-center font-medium font-montserrat text-[12px] text-white px-4 pt-4 pb-2 h-full rounded-md`}
     >
       {description}
     </p>

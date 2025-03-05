@@ -24,4 +24,6 @@
 @theme {
   --font-sigmar: "Sigmar", "sans-serif";
   --font-montserrat: "Montserrat", "sans-serif";
+  --color-t1-primary: #e3092b;
+  --color-t1-primary-dark: #711420;
 }
