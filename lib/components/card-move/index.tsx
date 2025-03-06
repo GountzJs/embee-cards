@@ -10,7 +10,6 @@ interface CardMoveProps {
 export function CardMove({
   children,
   maxTilt = 15,
-  perspective = 1000,
   ranking = 1,
 }: CardMoveProps) {
   const [tilt, setTilt] = useState({ x: 0, y: 0 });
@@ -80,7 +79,7 @@ export function CardMove({
       onMouseLeave={handleMouseLeave}
       className="w-[300px] h-[450px] relative transition-transform duration-200 ease-out"
       style={{
-        transform: `perspective(${perspective}px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
+        transform: `perspective(600px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
         transformStyle: "preserve-3d",
       }}
     >
