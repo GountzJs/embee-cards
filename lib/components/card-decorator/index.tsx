@@ -3,9 +3,9 @@ import { LolesportsLogo } from "../../icons/lolesports-logo";
 import { T1Logo } from "../../icons/t1-logo";
 import { CardCategory } from "../../models/enums/card-category.enum";
 import { BoxShaco } from "../../svgs/box-shaco";
-import { FungusTeemo } from "../../svgs/fungus-teemo";
 import { HatShaco } from "../../svgs/hat-shaco";
 import { Teemonio } from "../../svgs/teemonio";
+import { FungusTeemo } from "../fungus-teemo";
 
 interface Props {
   category: CardCategory;
@@ -41,8 +41,8 @@ function EmbeeDecorator() {
 function TrollDecorator() {
   return (
     <>
-      <Teemonio width={35} height={35} />
-      <FungusTeemo width={35} height={35} />
+      <Teemonio width={40} height={40} />
+      <FungusTeemo />
     </>
   );
 }
