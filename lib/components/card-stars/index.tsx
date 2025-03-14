@@ -12,6 +12,7 @@ export function CardStars({ category, ranking, isSpecial }: Props) {
   const getColor = () => {
     if (category === CardCategory.T1) return "#e3092b";
     if (category === CardCategory.Embee) return "#a57713";
+    if (category === CardCategory.Troll) return "#9c4b97";
     return "#6bc6d9ff";
   };
   const color = getColor();

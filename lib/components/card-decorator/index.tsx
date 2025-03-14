@@ -3,7 +3,9 @@ import { LolesportsLogo } from "../../icons/lolesports-logo";
 import { T1Logo } from "../../icons/t1-logo";
 import { CardCategory } from "../../models/enums/card-category.enum";
 import { BoxShaco } from "../../svgs/box-shaco";
+import { FungusTeemo } from "../../svgs/fungus-teemo";
 import { HatShaco } from "../../svgs/hat-shaco";
+import { Teemonio } from "../../svgs/teemonio";
 
 interface Props {
   category: CardCategory;
@@ -36,6 +38,15 @@ function EmbeeDecorator() {
   );
 }
 
+function TrollDecorator() {
+  return (
+    <>
+      <Teemonio width={35} height={35} />
+      <FungusTeemo width={35} height={35} />
+    </>
+  );
+}
+
 export function CardDecorator({ category }: Props) {
   if (category === CardCategory.Embee)
     return (
@@ -48,6 +59,7 @@ export function CardDecorator({ category }: Props) {
     <div className="flex items-center justify-between w-full">
       {category === CardCategory.T1 && <T1Decorator />}
       {category === CardCategory.Lolesports && <LolesportsDecorator />}
+      {category === CardCategory.Troll && <TrollDecorator />}
     </div>
   );
 }

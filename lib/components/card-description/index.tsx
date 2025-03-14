@@ -9,6 +9,7 @@ export function CardDescription({ category, description }: Props) {
   const getColor = () => {
     if (category === CardCategory.T1) return "bg-t1-primary-dark";
     if (category === CardCategory.Embee) return "bg-embee-primary-dark";
+    if (category === CardCategory.Troll) return "bg-troll-primary-dark";
     return "bg-lol-primary-dark";
   };
   const color = getColor();
