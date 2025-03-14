@@ -30,7 +30,7 @@ function LolesportsDecorator() {
 function EmbeeDecorator() {
   return (
     <>
-      <HatShaco width={45} height={45} style={{ marginBottom: "15px" }} />
+      <HatShaco width={50} height={45} />
       <BoxShaco width={50} height={50} />
     </>
   );
@@ -38,7 +38,7 @@ function EmbeeDecorator() {
 
 export function CardDecorator({ category }: Props) {
   return (
-    <div className="flex items-center justify-between px-2 w-full">
+    <div className="flex items-center justify-between w-full">
       {category === CardCategory.T1 && <T1Decorator />}
       {category === CardCategory.Lolesports && <LolesportsDecorator />}
       {category === CardCategory.Embee && <EmbeeDecorator />}
