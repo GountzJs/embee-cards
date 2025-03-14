@@ -30,11 +30,13 @@ export function CardEmbeejayz({
 }: Props) {
   const getGradientColor = () => {
     if (category === CardCategory.T1) return "#711420";
+    if (category === CardCategory.Embee) return "#755914";
     return "#5c9398ff";
   };
 
   const getBorderColor = () => {
     if (category === CardCategory.T1) return "#e3092b";
+    if (category === CardCategory.Embee) return "#a57713";
     return "#6bc6d9ff";
   };
 

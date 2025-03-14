@@ -1,6 +1,6 @@
 export enum CardCategory {
-  T1 = "t1",
-  Lolesports = "lolesports",
-  Embee = "embee",
-  Troll = "troll",
+  T1 = "T1",
+  Lolesports = "LOLESPORTS",
+  Embee = "EMBEEJAYZ",
+  Troll = "TROLL",
 }

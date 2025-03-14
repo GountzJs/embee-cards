@@ -15,7 +15,7 @@ export function CardFlipped({ front, back, initialFace = "front" }: CardProps) {
 
   return (
     <div
-      className="cursor-pointer"
+      className="cursor-pointer w-fit h-fit"
       onClick={handleFlip}
       style={{ perspective: "2000px" }}
     >
