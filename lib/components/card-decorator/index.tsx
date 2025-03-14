@@ -30,8 +30,8 @@ function LolesportsDecorator() {
 function EmbeeDecorator() {
   return (
     <>
-      <HatShaco />
       <HatShaco width={35} height={35} />
+      <BoxShaco width={35} height={35} />
     </>
   );
 }
