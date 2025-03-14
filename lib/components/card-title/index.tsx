@@ -9,6 +9,7 @@ interface Props {
 export function CardTitle({ category, name }: Props) {
   const getColor = () => {
     if (category === CardCategory.T1) return "text-t1-primary";
+    if (category === CardCategory.Embee) return "text-embee-primary";
     return "text-lol-primary";
   };
   const color = getColor();
