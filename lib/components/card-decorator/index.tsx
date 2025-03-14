@@ -30,8 +30,8 @@ function LolesportsDecorator() {
 function EmbeeDecorator() {
   return (
     <>
-      <HatShaco width={50} height={50} />
-      <BoxShaco style={{ marginTop: 10 }} width={50} height={50} />
+      <HatShaco width={40} height={40} />
+      <BoxShaco style={{ marginTop: 5 }} width={50} height={50} />
     </>
   );
 }
@@ -39,7 +39,7 @@ function EmbeeDecorator() {
 export function CardDecorator({ category }: Props) {
   if (category === CardCategory.Embee)
     return (
-      <div className="flex items-start justify-between h-60 w-full">
+      <div className="flex items-start justify-between h-[60px] w-full">
         <EmbeeDecorator />
       </div>
     );
